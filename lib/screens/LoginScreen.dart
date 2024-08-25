@@ -23,21 +23,21 @@ class _LoginScreenState extends State<LoginScreen> {
   Future<void> _loadData() async {
     try {
       final documentUser = await appwriteService.fetchDocuments(
-          '66aa4055003a590a40ce', '66aa522d003e7c88f4e9');
+          '66cbb288000b1e3b673f', '66cbb2ad0028764fc97f');
       final documentMachine = await appwriteService.fetchDocuments(
-          '66aa4055003a590a40ce', '66aa524f003b8a919890');
+          '66cbb288000b1e3b673f', '66cbb313001979612ff6');
 
       setState(() {
         userList = documentUser.map((doc) {
           return {
-            'id': doc.data['nome'] ?? 'Sem nome',
-            'name': doc.data['nome'] ?? 'Sem nome',
+            'id': doc.data['Nome'] ?? 'Sem nome',
+            'name': doc.data['Nome'] ?? 'Sem nome',
           };
         }).toList();
         machineList = documentMachine.map((doc) {
           return {
-            'id': doc.data['nome'] ?? 'Sem nome',
-            'name': doc.data['nome'] ?? 'Sem nome',
+            'id': doc.data['Nome'] ?? 'Sem nome',
+            'name': doc.data['Nome'] ?? 'Sem nome',
           };
         }).toList();
       });

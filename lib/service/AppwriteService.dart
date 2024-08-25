@@ -8,7 +8,7 @@ class AppwriteService {
   AppwriteService() {
     client = Client()
         .setEndpoint("https://cloud.appwrite.io/v1")
-        .setProject("66aa401e00292e7bdae6")
+        .setProject("66cbb2520024ddcdfdba")
         .setSelfSigned(status: true);
 
     databases = Databases(client);
